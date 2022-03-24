@@ -1,0 +1,122 @@
+.button {
+  min-width: 86px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 4px 10px rgba(135, 167, 171, 0.5);
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+  text-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.buttonActive {
+  cursor: pointer;
+}
+
+.buttonActive:hover {
+  filter: brightness(90%);
+}
+
+.buttonActive:active {
+  filter: brightness(80%);
+}
+
+.buttonDisabled {
+  color: rgba(0,0,0,.26);
+  background-color: rgba(0,0,0,.12);
+  box-shadow: none;
+}
+
+.primaryButton {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.successButton {
+  background-color: #198754;
+  color: white;
+}
+
+.dangerButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.warningButton {
+  background-color: #ffc107;
+  color: black;
+}
+
+.smallButton {
+  font-size: 12px;
+  padding: 8px 8px;
+}
+
+.largeButton {
+  font-size: 16px;
+  padding: 12px 16px;
+}
+
+.blockButton {
+  width: 100%;
+}
+
+.outlinedButton {
+  color: black;
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.primaryOutlined {
+  color: #0d6efd;
+  border: 1px solid #0d6efd;
+}
+
+.successOutlined {
+  color: #198754;
+  border: 1px solid #198754;
+}
+
+.warningOutlined {
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+
+.dangerOutlined {
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.textButton {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+}
+
+.textButton:hover {
+  background-color: #f5f5f5;
+}
+
+.buttonIcon {
+  vertical-align: middle;
+}
+
+.buttonIcon img {
+  margin-left: 10px;
+  height: 16px;
+}
+
+.largeIconButton img {
+  height: 18px;
+}
+
+.smallIconButton img {
+  height: 14px;
+}
+
+.preloader {
+  height: 20px;
+}
