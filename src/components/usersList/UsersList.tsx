@@ -19,13 +19,13 @@ export const UsersList = () => {
   }, [])
 
   return (
-    <div className={classes.usersList}>
+    <div className={classes['users-list']}>
       {
         users.map(user => (
           <Paper elevation={3} key={user.id}>
-            <Box className={classes.listItemContainer}>
+            <Box className={classes['users-list__container']}>
               <AccountCircleIcon fontSize='large' />
-              <Box className={classes.userInfo}>
+              <Box className={classes['users-list__info']}>
                 <p>{user.name}</p>
                 <p>{user.address.zipcode} {user.address.city} {user.address.street} {user.address.suite}</p>
                 <p>{user.phone}</p>

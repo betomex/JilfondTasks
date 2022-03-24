@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import './CustomButton.css';
+import './CustomButton.scss';
 import preloader from '../../assets/preloader.gif';
 
 type PropsType = {
@@ -35,32 +35,32 @@ export const CustomButton: React.FC<PropsType> = ({
   return (
     <button
       className={
-        classNames('button', {
+        classNames('custom-button', {
           ['loadingButton']: isLoading,
-          ['buttonDisabled']: disabled,
-          ['buttonActive']: !disabled,
-          ['primaryButton']: type === 'primary',
-          ['dangerButton']: type === 'danger',
-          ['successButton']: type === 'success',
-          ['warningButton']: type === 'warning',
-          ['smallButton smallIconButton']: min,
-          ['largeButton largeIconButton']: large,
-          ['blockButton']: block,
-          ['outlinedButton']: outlined,
-          ['primaryOutlined']: outlined && type === 'primary',
-          ['successOutlined']: outlined && type === 'success',
-          ['warningOutlined']: outlined && type === 'warning',
-          ['dangerOutlined']: outlined && type === 'danger',
-          ['textButton']: text
+          ['custom-button_disabled']: disabled,
+          ['custom-button_active']: !disabled,
+          ['custom-button_primary']: type === 'primary',
+          ['custom-button_danger']: type === 'danger',
+          ['custom-button_success']: type === 'success',
+          ['custom-button_warning']: type === 'warning',
+          ['custom-button_small custom-button__icon_small']: min,
+          ['custom-button_large custom-button__icon_large']: large,
+          ['custom-button_block']: block,
+          ['custom-button_outlined']: outlined,
+          ['custom-button_primary_outlined']: outlined && type === 'primary',
+          ['custom-button_success_outlined']: outlined && type === 'success',
+          ['custom-button_warning_outlined']: outlined && type === 'warning',
+          ['custom-button_danger_outlined']: outlined && type === 'danger',
+          ['custom-button_text']: text
         })
       }
       disabled={disabled}
       onClick={onClickHandler}
     >
       {!isLoading && children[0]}
-      {!isLoading && <span className='buttonIcon'>{children[1]}</span>}
+      {!isLoading && <span className='custom-button__icon'>{children[1]}</span>}
       {isLoading && (
-        <img className='preloader' src={preloader}></img>
+        <img className='custom-button__preloader' src={preloader}></img>
       )}
     </button>
   )

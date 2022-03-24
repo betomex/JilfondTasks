@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { dropdownData } from '../../constants/dropdownData';
-import './customDropdown.css';
+import './customDropdown.scss';
 
 export const CustomDropdown = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -31,7 +31,7 @@ export const CustomDropdown = () => {
       ref={node}
     >
       <button
-        className='dropdownButton'
+        className='dropdown__button'
         onClick={onDropdownClick}
       >
         CustomDropdown

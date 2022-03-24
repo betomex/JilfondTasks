@@ -1,17 +1,17 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const usersListStyles = makeStyles({
-  usersList: {
+  'users-list': {
     width: '45%'
   },
-  listItemContainer: {
+  'users-list__container': {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '24px 48px',
     marginBottom: '12px'
   },
-  userInfo: {
+  'users-list__info': {
     display: 'flex',
     flexGrow: 1,
     textAlign: 'center',
