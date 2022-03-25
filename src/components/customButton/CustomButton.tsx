@@ -5,7 +5,7 @@ import preloader from '../../assets/preloader.gif';
 
 type PropsType = {
   isLoading?: boolean
-  callback?: () => void
+  onClick: () => void
   disabled?: boolean
   type?: 'primary' | 'success' | 'warning' | 'danger' | 'default'
   min?: boolean
@@ -18,7 +18,7 @@ type PropsType = {
 
 export const CustomButton: React.FC<PropsType> = ({ 
   isLoading, 
-  callback, 
+  onClick, 
   disabled, 
   type, 
   min, 
@@ -28,10 +28,6 @@ export const CustomButton: React.FC<PropsType> = ({
   text, 
   children 
 }) => {
-  const onClickHandler = () => {
-    callback!();
-  }
-
   return (
     <button
       className={
@@ -55,7 +51,7 @@ export const CustomButton: React.FC<PropsType> = ({
         })
       }
       disabled={disabled}
-      onClick={onClickHandler}
+      onClick={onClick}
     >
       {!isLoading && children[0]}
       {!isLoading && <span className='custom-button__icon'>{children[1]}</span>}

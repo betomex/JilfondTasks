@@ -1,11 +1,18 @@
-import React, { SyntheticEvent, useEffect, useRef, useState } from 'react';
-import { dropdownData } from '../../constants/dropdownData';
+import React, { useEffect, useRef, useState } from 'react';
 import './customDropdown.scss';
 
-export const CustomDropdown = () => {
+type PropsType = {
+  title: string
+  data: Array<{
+    id: number
+    name: string
+  }>
+}
+
+export const CustomDropdown: React.FC<PropsType> = ({title, data}) => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [selectedMenuItem, setSelectedMenuItem] = useState<string | null>(null);
-  const node = useRef(null!);
+  const dropdown = useRef(null);
   
   const onDropdownClick = () => {
     setIsMenuOpened(state => !state);
@@ -26,23 +33,24 @@ export const CustomDropdown = () => {
   }, [isMenuOpened]);
 
   return (
-    <div
+    <div 
       className="dropdown"
-      ref={node}
+      ref={dropdown}
     >
       <button
         className='dropdown__button'
         onClick={onDropdownClick}
       >
-        CustomDropdown
+        {title}
       </button>
       {
         isMenuOpened && (
-          <ul>
+          <ul className='dropdown__list'>
             {
-              dropdownData.map(option => (
+              data.map(option => (
                 <li 
                   key={option.id}
+                  className='dropdown__list__item'
                   onClick={() => setSelectedMenuItem(option.name)}
                 >
                   <div>{option.id} {option.name}</div>

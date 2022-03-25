@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, TextField } from '@material-ui/core';
 import EditIcon from '@mui/icons-material/Edit';
 import { userEditFormParams } from '../../constants/userEditFormParams';
@@ -65,28 +65,30 @@ export const EditModal: React.FC<PropsType> = ({ user }) => {
             <Dialog open={isModalOpened} onClose={onModalClose}>
               <DialogTitle>Изменить данные пользователя</DialogTitle>
               <DialogContent>
-                {
-                  userEditFormParams.map(param => {
-                    const key = (param.id) as keyof UsersFormInitialValuesType;
-                    return (
-                      <TextField
-                        key={param.id}
-                        id={param.id}
-                        name={param.id}
-                        value={values[key]}
-                        margin="dense"
-                        label={param.label}
-                        type="text"
-                        fullWidth
-                        variant="standard"
-                        required
-                        error={errors && Object.keys(errors).includes(param.id)}
-                        helperText={errors[key]}
-                        onChange={handleChange}
-                      />
-                    )
-                  })
-                }
+                <Form>
+                  {
+                    userEditFormParams.map(param => {
+                      const key = (param.id) as keyof UsersFormInitialValuesType;
+                      return (
+                        <TextField
+                          key={param.id}
+                          id={param.id}
+                          name={param.id}
+                          value={values[key]}
+                          margin="dense"
+                          label={param.label}
+                          type="text"
+                          fullWidth
+                          variant="standard"
+                          required
+                          error={errors && Object.keys(errors).includes(param.id)}
+                          helperText={errors[key]}
+                          onChange={handleChange}
+                        />
+                      )
+                    })
+                  }
+                </Form>
               </DialogContent>
               <DialogActions>
                 <Button onClick={onModalClose}>Отмена</Button>

@@ -3,6 +3,7 @@ import icon from './assets/icon.png';
 import { CustomButton } from './components/customButton/CustomButton';
 import { CustomDropdown } from './components/customDropdown/CustomDropdown';
 import { UsersList } from './components/usersList/UsersList';
+import { dropdownData } from './constants/dropdownData';
 
 export const App = () => {
   return (
@@ -10,11 +11,17 @@ export const App = () => {
       <CustomButton
         large
         type='primary'
+        onClick={() => alert('Кнопка была нажата!')}
       >
-        Click Me!
+        Нажми на меня!
         <img src={icon} />
       </CustomButton>
-      <CustomDropdown />
+
+      <CustomDropdown 
+        title={'CustomDropdown'}
+        data={dropdownData}
+      />
+
       <UsersList />
     </>
   );

@@ -1,8 +1,10 @@
+@import '../../commonStyles/componentsColors.scss';
+
 .dropdown {
   position: relative;
   display: inline-block;
 
-  ul {
+  &__list {
     position: absolute;
     list-style-type: none;
     margin: 0;
@@ -14,20 +16,20 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 
-    li {
+    &__item {
       padding: 8px 16px;
-      border-bottom: 1px solid #f5f5f5;
+      border-bottom: 1px solid $lightColor;
     }
 
-    li:last-child {
+    &__item:last-child {
       border-bottom: none;
     }
 
-    li:hover {
-      background-color: #f5f5f5;
+    &__item:hover {
+      background-color: $lightColor;
     }
     
-    li:active {
+    &__item:active {
       background-color: #e0e0e0;
     }
   }

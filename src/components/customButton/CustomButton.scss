@@ -1,8 +1,4 @@
-$lightColor: #f5f5f5;
-$primaryColor: #0d6efd;
-$successColor: #198754;
-$warningColor: #ffc107;
-$dangerColor: #dc3545;
+@import '../../commonStyles/componentsColors.scss';
 
 .custom-button {
   min-width: 86px;
@@ -16,119 +12,119 @@ $dangerColor: #dc3545;
   font-weight: 500;
   text-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.15);
   outline: none;
-}
 
-.custom-button_active {
-  cursor: pointer;
-}
-
-.custom-button_active:hover {
-  filter: brightness(90%);
-}
-
-.custom-button_active:active {
-  filter: brightness(80%);
-}
-
-.custom-button_disabled {
-  color: rgba(0,0,0,.26);
-  background-color: rgba(0,0,0,.12);
-  box-shadow: none;
-}
-
-.custom-button_primary {
-  background-color: $primaryColor;
-  color: white;
-}
-
-.custom-button_success {
-  background-color: $successColor;
-  color: white;
-}
-
-.custom-button_danger {
-  background-color: $dangerColor;
-  color: white;
-}
-
-.custom-button_warning {
-  background-color: $warningColor;
-  color: black;
-}
-
-.custom-button_small {
-  font-size: 12px;
-  padding: 8px 8px;
-}
-
-.custom-button_large {
-  font-size: 16px;
-  padding: 12px 16px;
-}
-
-.custom-button_block {
-  width: 100%;
-}
-
-.custom-button_outlined {
-  color: black;
-  background-color: transparent;
-  border: 1px solid black;
-}
-
-.custom-button_primary_outlined {
-  color: $primaryColor;
-  border: 1px solid $primaryColor;
-}
-
-.custom-button_success_outlined {
-  color: $successColor;
-  border: 1px solid $successColor;
-}
-
-.custom-button_warning_outlined {
-  color: $warningColor;
-  border: 1px solid $warningColor;
-}
-
-.custom-button_danger_outlined {
-  color: $dangerColor;
-  border: 1px solid $dangerColor;
-}
-
-.custom-button_text {
-  background-color: transparent;
-  box-shadow: none;
-  color: black;
-}
-
-.custom-button_text:hover {
-  background-color: $lightColor;
-}
-
-.custom-button__icon {
-  vertical-align: middle;
-}
-
-.custom-button__icon {
-  img {
-    margin-left: 10px;
-    height: 16px;
+  &_active {
+    cursor: pointer;
   }
-}
 
-.custom-button__icon_large {
-  img {
-    height: 18px;
+  &_active:hover {
+    filter: brightness(90%);
   }
-}
-
-.custom-button__icon_small {
-  img {
-    height: 14px;
+  
+  &_active:active {
+    filter: brightness(80%);
   }
-}
 
-.custom-button__preloader {
-  height: 20px;
+  &_disabled {
+    color: rgba(0,0,0,.26);
+    background-color: rgba(0,0,0,.12);
+    box-shadow: none;
+  }
+  
+  &_primary {
+    background-color: $primaryColor;
+    color: white;
+  }
+  
+  &_success {
+    background-color: $successColor;
+    color: white;
+  }
+  
+  &_danger {
+    background-color: $dangerColor;
+    color: white;
+  }
+  
+  &_warning {
+    background-color: $warningColor;
+    color: black;
+  }
+  
+  &_small {
+    font-size: 12px;
+    padding: 8px 8px;
+  }
+  
+  &_large {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+  
+  &_block {
+    width: 100%;
+  }
+  
+  &_outlined {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+  }
+
+  &_primary_outlined {
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+  }
+  
+  &_success_outlined {
+    color: $successColor;
+    border: 1px solid $successColor;
+  }
+  
+  &_warning_outlined {
+    color: $warningColor;
+    border: 1px solid $warningColor;
+  }
+  
+  &_danger_outlined {
+    color: $dangerColor;
+    border: 1px solid $dangerColor;
+  }
+  
+  &_text {
+    background-color: transparent;
+    box-shadow: none;
+    color: black;
+  }
+  
+  &_text:hover {
+    background-color: $lightColor;
+  }
+
+  &__icon {
+    vertical-align: middle;
+  }
+  
+  &__icon {
+    img {
+      margin-left: 10px;
+      height: 16px;
+    }
+  }
+  
+  &__icon_large {
+    img {
+      height: 18px;
+    }
+  }
+  
+  &__icon_small {
+    img {
+      height: 14px;
+    }
+  }
+  
+  &__preloader {
+    height: 20px;
+  }
 }
